@@ -1,0 +1,65 @@
+<svg width="960" height="640" viewBox="0 0 960 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="150" y1="50" x2="870" y2="580" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6" />
+      <stop offset="1" stop-color="#1D4ED8" />
+    </linearGradient>
+    <linearGradient id="deviceGradient" x1="230" y1="210" x2="560" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5FAFF" />
+      <stop offset="1" stop-color="#DBEAFE" />
+    </linearGradient>
+    <linearGradient id="cardGradient" x1="610" y1="260" x2="820" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EFF6FF" />
+      <stop offset="1" stop-color="#BFDBFE" />
+    </linearGradient>
+    <clipPath id="clipPath">
+      <rect x="0" y="0" width="960" height="640" rx="32" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#clipPath)">
+    <rect width="960" height="640" fill="url(#bgGradient)" opacity="0.12" />
+    <circle cx="860" cy="90" r="140" fill="#3B82F6" opacity="0.18" />
+    <circle cx="120" cy="520" r="190" fill="#2563EB" opacity="0.12" />
+
+    <!-- Abstract waves -->
+    <path d="M-40 420C120 360 220 360 400 430C580 500 680 500 880 430C1080 360 1100 520 1100 520V700H-40V420Z" fill="#1E3A8A" opacity="0.08" />
+    <path d="M-60 470C80 420 220 410 400 470C580 530 720 520 900 470C1080 420 1100 580 1100 580V720H-60V470Z" fill="#1E40AF" opacity="0.08" />
+
+    <!-- Laptop device -->
+    <rect x="210" y="200" width="360" height="240" rx="24" fill="url(#deviceGradient)" />
+    <rect x="234" y="226" width="312" height="182" rx="16" fill="white" />
+    <rect x="234" y="226" width="312" height="54" rx="16" fill="#E0F2FE" />
+    <circle cx="266" cy="253" r="11" fill="#3B82F6" opacity="0.8" />
+    <circle cx="302" cy="253" r="11" fill="#93C5FD" opacity="0.8" />
+    <circle cx="338" cy="253" r="11" fill="#BFDBFE" opacity="0.8" />
+    <rect x="266" y="318" width="180" height="18" rx="9" fill="#60A5FA" opacity="0.7" />
+    <rect x="266" y="352" width="240" height="18" rx="9" fill="#BFDBFE" opacity="0.8" />
+    <rect x="266" y="386" width="140" height="18" rx="9" fill="#DBEAFE" opacity="0.8" />
+
+    <!-- Keyboard base -->
+    <path d="M190 452H590C598 452 604 456 606 463L620 498C622 505 617 512 609 512H171C163 512 158 505 160 498L174 463C176 456 182 452 190 452Z" fill="#1E3A8A" opacity="0.12" />
+
+    <!-- Floating progress cards -->
+    <rect x="620" y="260" width="200" height="160" rx="24" fill="url(#cardGradient)" />
+    <rect x="648" y="288" width="144" height="20" rx="10" fill="#2563EB" opacity="0.75" />
+    <rect x="648" y="326" width="120" height="16" rx="8" fill="#1E3A8A" opacity="0.35" />
+    <rect x="648" y="354" width="96" height="16" rx="8" fill="#1E3A8A" opacity="0.25" />
+    <rect x="648" y="382" width="124" height="16" rx="8" fill="#1E3A8A" opacity="0.45" />
+
+    <!-- Avatars -->
+    <circle cx="312" cy="168" r="22" fill="#3B82F6" opacity="0.75" />
+    <circle cx="360" cy="138" r="18" fill="#60A5FA" opacity="0.6" />
+    <circle cx="410" cy="170" r="20" fill="#2563EB" opacity="0.5" />
+    <circle cx="458" cy="140" r="16" fill="#1E40AF" opacity="0.45" />
+    <path d="M312 146C304 146 298 152 298 160C298 168 304 174 312 174C320 174 326 168 326 160C326 152 320 146 312 146Z" fill="white" opacity="0.35" />
+    <path d="M360 120C352 120 346 126 346 134C346 142 352 148 360 148C368 148 374 142 374 134C374 126 368 120 360 120Z" fill="white" opacity="0.22" />
+
+    <!-- Decorative sparkles -->
+    <path d="M700 180L708 204H732L712 219L720 244L700 229L680 244L688 219L668 204H692L700 180Z" fill="#DBEAFE" opacity="0.4" />
+    <path d="M210 320L215 336H232L219 347L224 364L210 354L196 364L201 347L188 336H205L210 320Z" fill="#BFDBFE" opacity="0.45" />
+
+    <!-- Gradient overlay -->
+    <rect width="960" height="640" fill="url(#bgGradient)" opacity="0.1" />
+  </g>
+</svg>

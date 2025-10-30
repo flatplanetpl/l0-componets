@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --background: 210 40% 98%;
+    --foreground: 222.2 47.4% 11.2%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+  }
+
+  .dark {
+    color-scheme: dark;
+    --background: 222.2 47.4% 11.2%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 47.4% 15%;
+    --card-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 221.2 83.2% 53.3%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer utilities {
+  .dark .bg-white {
+    --tw-bg-opacity: 1 !important;
+    background-color: hsl(var(--card) / var(--tw-bg-opacity)) !important;
+  }
+
+  .dark .bg-slate-50 {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(15 23 42 / var(--tw-bg-opacity)) !important;
+  }
+
+  .dark .bg-slate-50\/60 {
+    background-color: rgba(15, 23, 42, 0.6) !important;
+  }
+
+  .dark .bg-white\/60 {
+    background-color: rgba(30, 41, 59, 0.6) !important;
+  }
+
+  .dark .text-slate-900,
+  .dark .text-slate-800 {
+    color: hsl(var(--foreground)) !important;
+  }
+
+  .dark .text-slate-700,
+  .dark .text-slate-600 {
+    color: hsl(var(--muted-foreground)) !important;
+  }
+
+  .dark .text-slate-500,
+  .dark .text-slate-400 {
+    color: hsl(var(--muted-foreground)) !important;
+    opacity: 0.85;
+  }
+
+  .dark .text-gray-700,
+  .dark .text-gray-600,
+  .dark .text-gray-500 {
+    color: hsl(var(--muted-foreground)) !important;
+  }
+
+  .dark .bg-gray-100,
+  .dark .bg-gray-50 {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(51 65 85 / var(--tw-bg-opacity)) !important;
+  }
+
+  .dark .border-gray-200 {
+    border-color: hsl(var(--border)) !important;
+  }
+
+  .dark .border-slate-200 {
+    border-color: hsl(var(--border)) !important;
+  }
+
+  .dark .bg-slate-100 {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(51 65 85 / var(--tw-bg-opacity)) !important;
+  }
+}

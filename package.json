@@ -1,0 +1,29 @@
+{
+  "name": "boilerplate-app",
+  "version": "1.0.0",
+  "description": "Modern web app boilerplate with Next.js, NestJS, and Docker",
+  "scripts": {
+    "dev": "docker-compose up --build",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run start:dev",
+    "dev:demo": "cd demo && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend && npm run build:demo",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "build:demo": "cd demo && npm run build",
+    "test": "cd frontend && npm test && cd backend && npm test && cd demo && npm test",
+    "setup": "npm run setup:frontend && npm run setup:backend && npm run setup:demo",
+    "setup:frontend": "cd frontend && npm install",
+    "setup:backend": "cd backend && npm install && npx prisma generate && npx prisma db push",
+    "setup:demo": "cd demo && npm install"
+  },
+  "keywords": [
+    "nextjs",
+    "nestjs",
+    "typescript",
+    "docker",
+    "boilerplate"
+  ],
+  "author": "",
+  "license": "MIT"
+}

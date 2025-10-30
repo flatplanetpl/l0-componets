@@ -1,0 +1,43 @@
+services:
+  demo:
+    build:
+      context: .
+      dockerfile: demo/Dockerfile
+    ports:
+      - "${FRONTEND_PORT_DEMO:-3000}:3000"
+    volumes:
+      - ./demo:/app
+      - /app/node_modules
+      - ./frontend/src:/frontend/src
+    env_file:
+      - ./demo/.env
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "${BACKEND_PORT:-3001}:3001"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+      - ./uploads:/app/uploads
+    env_file:
+      - ./backend/.env
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - db
+
+  db:
+    image: alpine:latest
+    command: tail -f /dev/null
+    volumes:
+      - ./backend/prisma:/data
+
+volumes:
+  uploads:
